@@ -34,14 +34,13 @@
         transition: max-height .5s ease-in, padding-top.45s ease-in, padding-bottom .45s ease-in;
     }
 
-    /* 55 */
     .mail-boolean-filter {
         flex-direction: column;
         max-height: 0;
         overflow: hidden;
         transition: max-height .5s ease-in, padding-top.45s ease-in, padding-bottom .45s ease-in;
     }
-/* 55 */
+
     .mail-boolean-filter.visible {
         max-height: 300px;
         transition: max-height .5s ease-in, padding-top.45s ease-in, padding-bottom .45s ease-in;

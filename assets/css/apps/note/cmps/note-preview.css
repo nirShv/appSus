@@ -1,0 +1,51 @@
+.note-preview {
+    padding: 15px;
+    border: 1px solid var(--selected-filter-bg-color);
+    border-radius: 0.8rem;
+    margin-bottom: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    min-width: 160px;
+
+}
+
+.note-preview:hover {
+    box-shadow: 0 0 3px black;
+    }
+
+.note-img{
+    border-radius: 0.8rem;
+    opacity: 0.8;
+}
+.note-vid{
+    border-radius: 0.8rem;
+    opacity: 0.8;
+
+}
+
+.note-btns-container button img{
+    width: 10px;
+}
+.note-btns-container img{
+    width: 20px;
+    opacity: 0.7;
+}
+.note-btns-container img:hover{
+    opacity: 1;
+}
+
+.note-btns-container{
+    padding-top: 10px;
+ opacity: 0;
+ transition: opacity 0.3s;
+ display: flex;
+ justify-content: space-between;
+ /* border: 10px solid green; */
+}
+.note-preview:hover .note-btns-container{
+    opacity: 1;
+}
+
+audio{
+    max-width: 240px;
+}

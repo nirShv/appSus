@@ -1,0 +1,22 @@
+
+.book-app{
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* MQ  */
+
+@media (max-width: 600px) {
+
+    .book-app{
+        padding-top: 100px;
+    }
+
+
+    .book-details{
+        padding-top: 110px;
+        /* color: red; */
+    }
+ 
+}

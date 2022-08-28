@@ -1,0 +1,22 @@
+.mail-app {
+    background-color: var(--main-bg-color);
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 10fr;
+    grid-template-rows: minmax(15px,0.3fr) 1fr 30fr;  
+    /* grid-template-rows: 1fr 25fr;   */
+    font-family: lato;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.mail-header {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.mail-header .mail-count {
+    float: inline-end;
+    /* float: right; */
+}

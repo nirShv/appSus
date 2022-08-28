@@ -20,6 +20,7 @@ export class MailBooleanFilter extends React.Component {
             }
         }), () => {
             this.props.onSetFilter(this.state.filterBy)
+            this.props._onOpenFilters()
         })
     }
 

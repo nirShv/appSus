@@ -29,7 +29,7 @@ export class MailApp extends React.Component {
         mailService.query(this.state.filterBy)
             .then(mails => {
                 this.setState({ mails })
-
+                if (mails.length === 0) showErrorMsg('No search results were found')
             })
             .catch(err => {
                 showErrorMsg('No search results were found')
@@ -99,12 +99,12 @@ export class MailApp extends React.Component {
         // if (!gUnReadCounter) gUnReadCounter = 0
         const unReadCount = gUnReadCounter
         const len = mails.length
-        const { onSetFilter, onRemoveMail, onStaredMail, onFilterChange, onNewMail, onTrashMail, onreadOrUnread } = this
+        const { onSetFilter, onRemoveMail, onStaredMail, onFilterChange, onNewMail, onTrashMail, onreadOrUnread, _onOpenFilters } = this
         return <div className="mail-app">
             <MailHeader numOfMailToDisplay={len} onSetFilter={onSetFilter} onNewMail={onNewMail} />
             <img onClick={this._onOpenFilters} className="mail-burger" src="assets/img/icons/menu-iconn.png" alt="" />
-            <MailFilter onSetFilter={onSetFilter} sideOrUp={'side'} unReadCount={unReadCount} />
-            <MailBooleanFilter onSetFilter={onSetFilter} />
+            <MailFilter onSetFilter={onSetFilter} sideOrUp={'side'} unReadCount={unReadCount} _onOpenFilters={_onOpenFilters} />
+            <MailBooleanFilter onSetFilter={onSetFilter} _onOpenFilters={_onOpenFilters} />
             <MailList mails={mails} onTrashMail={onTrashMail} onStaredMail={onStaredMail} onRemoveMail={onRemoveMail} /* onSetFilter={onSetFilter} sideOrUp={'side'} unReadCount={unReadCount}*/ />
 
         </div>

@@ -56,7 +56,6 @@ function query(filterBy) {
         }//if (subject)
     }//if (filterBy)
     if (mails) {
-
         return Promise.resolve(mails)
     } else {
         return Promise.reject('No search results were found')

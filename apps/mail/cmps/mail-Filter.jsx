@@ -31,6 +31,7 @@ export class MailFilter extends React.Component {
             }
         }), () => {
             this.props.onSetFilter(this.state.filterBy)
+            this.props._onOpenFilters()
         })
     }
 
@@ -49,6 +50,7 @@ export class MailFilter extends React.Component {
             }
         }), () => {
             this.props.onSetFilter(this.state.filterBy)
+             this.props._onOpenFilters()
         })
     }
 
